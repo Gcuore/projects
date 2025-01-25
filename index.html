@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>@gcuore • projects</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.11/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="cosmic-background">
+        <div class="container">
+            <header>
+                <div class="profile-header">
+                    <img id="user-avatar" src="/un ragazzo discord 300x300.jpg" alt="gcuore avatar" class="avatar">
+                    <div class="profile-info">
+                        <h1 id="username">@gcuore</h1>
+                        <div class="profile-stats">
+                            <span class="stat" id="total-likes">
+                                <span class="stat-value">200</span> likes
+                            </span>
+                            <span class="stat" id="total-views">
+                                <span class="stat-value">1,000+</span> views
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="toggle-buttons">
+                <button id="toggle-links" class="toggle-btn active">Links</button>
+                <button id="toggle-likes" class="toggle-btn">Likes</button>
+            </div>
+            <main>
+                <div class="projects-grid" id="projects-container">
+                    <div class="loading">
+                        <div class="loading-spinner"></div>
+                        <p>Loading links...</p>
+                    </div>
+                </div>
+            </main>
+
+            <div class="pagination">
+                <button id="load-more" class="load-more-btn" style="display: none">
+                    Load More
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="js/profile.js"></script>
+</body>
+</html>
