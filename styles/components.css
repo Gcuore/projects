@@ -1,0 +1,229 @@
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--secondary-color);
+}
+
+.profile-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat {
+    font-size: 1.1rem;
+}
+
+.stat-value {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.social-button {
+    background: var(--background-color);
+    color: var(--text-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.social-button:hover {
+    background: var(--secondary-color);
+    color: var(--background-color);
+    transform: translateY(-2px);
+}
+
+.toggle-btn {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.toggle-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    transform: translateY(-2px);
+}
+
+.toggle-btn.active {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: stretch; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.project-thumbnail-container {
+    width: 33.33%; 
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.02);
+}
+
+.project-info {
+    padding: 1.5rem;
+    width: 66.66%; 
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.project-title {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.project-author {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 0.25rem;
+}
+
+.project-author a {
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-author a:hover {
+    color: var(--text-color);
+}
+
+.project-description {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-meta {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+}
+
+.project-date {
+    opacity: 0.7;
+}
+
+.loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(28, 246, 199, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--secondary-color);
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.load-more-btn {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 2rem auto;
+    display: block;
+}
+
+.load-more-btn:hover {
+    transform: translateY(-2px);
+}
+
+.social-link-button {
+  display: block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.social-link-card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.social-link-card:hover {
+  transform: translateY(-3px);
+  background-color: rgba(28, 246, 199, 0.1);
+}
+
+.social-link-icon {
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.social-link-text {
+  color: var(--text-color);
+  font-weight: bold;
+}
