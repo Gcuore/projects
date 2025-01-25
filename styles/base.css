@@ -1,0 +1,11 @@
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
