@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('Minecraft Seven_2.ttf') format('truetype');
+}
+
+:root {
+    --bg-primary: #0f0f0f;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --accent-primary: #00ffff;
+    --accent-secondary: #ff6b6b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Minecraft', 'Inter', 'Arial', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: rgba(20, 20, 20, 0.8);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.name-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.verified-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header h1 {
+    color: var(--accent-primary);
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Minecraft', sans-serif;
+}
+
+header h2 {
+    color: var(--text-secondary);
+    margin-top: 0;
+    font-weight: 300;
+}
+
+.bio {
+    margin: 30px 0;
+    color: var(--text-secondary);
+}
+
+.projects-intro {
+    margin: 30px 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.contacts h3 {
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: all 0.5s ease;
+}
+
+.contact-links a:hover::before {
+    left: 100%;
+}
+
+.contact-links a svg {
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+}
+
+.whatsapp { background-color: #25D366; }
+.youtube { background-color: #FF0000; }
+.projects { background-color: #4CAF50; }
+.github { background-color: #333; }
+
+.go-back {
+    background-color: #2196F3;  
+}
+
+.contact-links a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.student-disclaimer {
+    margin: 30px 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.student-disclaimer h3 {
+    color: var(--accent-primary);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@keyframes githubEntrance {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) rotate(-15deg);
+        filter: blur(10px);
+    }
+    70% {
+        opacity: 0.7;
+        transform: scale(1.05) rotate(5deg);
+        filter: blur(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+        filter: blur(0);
+    }
+}
+
+body.github-entrance .container {
+    animation: githubEntrance 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    transform-origin: center;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 25px;
+        margin: 20px 10px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .contact-links a {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+
+    .student-disclaimer {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+}
