@@ -135,10 +135,6 @@ header h2 {
 .projects { background-color: #4CAF50; }
 .github { background-color: #333; }
 
-.go-back {
-    background-color: #2196F3;  
-}
-
 .contact-links a:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -161,27 +157,8 @@ header h2 {
     letter-spacing: 2px;
 }
 
-@keyframes githubEntrance {
-    0% {
-        opacity: 0;
-        transform: scale(1.5, 0.5) rotate(-15deg);  
-        filter: blur(10px);
-    }
-    70% {
-        opacity: 0.7;
-        transform: scale(1.1, 0.9) rotate(5deg);  
-        filter: blur(5px);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) rotate(0);  
-        filter: blur(0);
-    }
-}
-
-body.github-entrance .container {
-    animation: githubEntrance 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
-    transform-origin: center;
+.go-back { 
+    background-color: #1E88E5; 
 }
 
 @media (max-width: 480px) {
